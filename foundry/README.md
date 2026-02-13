@@ -1,66 +1,35 @@
-## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+#Foundry Smart Contract Deployment  
+### Foundry →COREDAO Testnet 
 
-Foundry consists of:
+This project demonstrates deploying the a stuudent attendance smart contract using **Foundry framework** deploy to:
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- **COREDAO Testnet**
 
-## Documentation
 
-https://book.getfoundry.sh/
+---
 
-## Usage
+# Student Attendance Contract - Foundry
+The Attendance smart contract is a simple on-chain student record and attendance tracking system built with Solidity. It allows anyone to register students and update their attendance status while keeping a transparent, verifiable record on the blockchain.
 
-### Build
+The contract allows:
+- Student Registration – Add a new student with a name and age. Each student is stored on-chain with a unique ID.
+- Attendance Tracking – Update and record whether a student is present or absent.
+- Data Retrieval – Fetch full student details (name, age, attendance status) using the student ID.
+- Student Count – Get the total number of registered students.
+- Event Logging – Emits blockchain events whenever:
+- A new student is added (StudentAdded)
 
-```shell
-$ forge build
-```
 
-### Test
+---
 
-```shell
-$ forge test
-```
+# Deployed Contract
 
-### Format
 
-```shell
-$ forge fmt
-```
+## Foundry Deployment Addresses
 
-### Gas Snapshots
+**COREDAO Testnet** (Chain ID: 1114)
+`0xEC213c0E7FA50B972609949CDAa35cf62e586d91`
 
-```shell
-$ forge snapshot
-```
 
-### Anvil
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
