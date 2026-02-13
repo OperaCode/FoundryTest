@@ -1,5 +1,3 @@
-
-#Foundry Smart Contract Deployment  
 ### Foundry →COREDAO Testnet 
 
 This project demonstrates deploying the a stuudent attendance smart contract using **Foundry framework** deploy to:
