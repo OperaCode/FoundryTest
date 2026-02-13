@@ -1,15 +1,20 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
 
-import "forge-std/Script.sol";
-import "../src/Attendance.sol";
+import {Script} from "forge-std/Script.sol";
+import {Attendance} from "../src/Attendance.sol";
 
 contract DeployAttendance is Script {
-    function run() external returns (Attendance deployed) {
-        uint256 pk = vm.envUint("PRIVATE_KEY");
+    Attendance public attendance;
 
-        vm.startBroadcast(pk);
-        deployed = new Attendance();
+    function setUp() public {}
+
+    function run() public {
+        vm.startBroadcast();
+
+        attendance = new Attendance();
+
+
         vm.stopBroadcast();
     }
 }
